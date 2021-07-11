@@ -335,8 +335,13 @@ namespace Simple.OData.Client.V4.Adapter
 
         protected override void AssignHeaders(ODataRequest request)
         {
-            request.Headers[HttpLiteral.Prefer] =
-                request.ResultRequired ? HttpLiteral.ReturnRepresentation : HttpLiteral.ReturnMinimal;
+            // Do not set Prefer headers for GET/DELETE requests per OData spec
+            // http://docs.oasis-open.org/odata/odata/v4.0/os/part1-protocol/odata-v4.0-os-part1-protocol.html#_Toc372793631
+            if ((request.Method != RestVerbs.Get) && (request.Method != RestVerbs.Delete))
+            {
+                request.Headers[HttpLiteral.Prefer] =
+                    request.ResultRequired ? HttpLiteral.ReturnRepresentation : HttpLiteral.ReturnMinimal;
+            }
         }
 
         private async Task<IODataRequestMessageAsync> CreateBatchOperationMessageAsync(string method, string collection, IDictionary<string, object> entryData, string commandText, bool resultRequired)
