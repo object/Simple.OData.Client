@@ -16,6 +16,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		Simple.OData.Client.nuspec = Simple.OData.Client.nuspec
 		Simple.OData.V3.Client.nuspec = Simple.OData.V3.Client.nuspec
 		Simple.OData.V4.Client.nuspec = Simple.OData.V4.Client.nuspec
+		sn.snk = sn.snk
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{78D04AF9-B9B4-4025-93C6-B3DB01EDAAE9}"

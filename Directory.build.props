@@ -4,5 +4,8 @@
     <Copyright>© Vagif Abilov and contributors 2012-2021</Copyright>
     <Description>OData client library for .NET 4.x, .NET Standard, .NET Core, iOS and Android.</Description>
     <NeutralLanguage>en-US</NeutralLanguage>
-  </PropertyGroup>
+
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>$(MSBuildThisFileDirectory)sn.snk</AssemblyOriginatorKeyFile> <StrongNamePublicKey>PublicKey=00240000048000009400000006020000002400005253413100040000010001002d608f5bce35f3eff1c1102fc3a90c0c1fb48a69491aa396dc6f2b3214374645179700266ff7c64b35de02956afd8e0f29a6de4d4a32660d2ac7c531901daf5e1130944b1ca1e9a95cb7abcadca5aab49507e5673c1d0315e41157c0daf720fca9a7bfa78a264648bedc83ddb75792c607dda0b84e48ff577db2898566a470c2</StrongNamePublicKey>
+   </PropertyGroup>
 </Project>
